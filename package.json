@@ -13,10 +13,13 @@
     "axios": "^1.6.8",
     "core-js": "^3.34.0",
     "fs": "^0.0.1-security",
+    "google": "^2.1.0",
+    "pinia": "^2.1.7",
     "roboto-fontface": "*",
     "vite-plugin-vue-layouts": "^0.11.0",
     "vue": "^3.3.0",
-    "vuetify": "^3.0.0"
+    "vuetify": "^3.0.0",
+    "window": "^4.2.7"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.0",

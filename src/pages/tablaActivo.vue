@@ -1,12 +1,19 @@
 <script setup>
 import { ref, computed, watch } from 'vue';
 import axios from 'axios';
+import Llave from "../llave.js";
+const token = Llave.llave
+axios.defaults.headers.common = {'Authorization': `bearer ${token}`};
+    
 const informacion = ref("");
 let url  = "https://localhost:4005/activos";
 //console.log(informacion)
 async function obtenerInformacion()
     {
-        let respuesta = await axios.get(url);
+        //console.log("Esperando respuesta2")
+       // let respuesta2 = await axios.get("https://localhost:4005/pasaporte");
+      //  console.log(respuesta2);
+      let respuesta = await axios.get(url);
         informacion.value = respuesta.data;
     }
     obtenerInformacion();

@@ -2,6 +2,10 @@
 import { ref, computed, watch } from 'vue';
 import axios from 'axios';
 const informacion = ref("");
+import Llave from "../llave.js";
+const token = Llave.llave
+axios.defaults.headers.common = {'Authorization': `bearer ${token}`};
+
 let url  = "https://localhost:4005/identificadores";
 //console.log(informacion)
 async function obtenerInformacion()

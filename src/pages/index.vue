@@ -1,5 +1,7 @@
 <template>
-  <HelloWorld />
+  <BtnGoogleLogin />
+
+  
 </template>
 
 

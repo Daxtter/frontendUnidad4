@@ -1,8 +1,19 @@
+
 <script setup>
     import {ref} from 'vue';
+    import Llave from "../llave.js";
+    import axios from "axios";
+    const token = Llave.llave;
+    axios.defaults.headers.common = {'Authorization': `bearer ${token}`};
     const urlImagen = ref("https://picsum.photos/400/400");
+    console.log("Ahora en imagen");
+    console.log(Llave.llave);
+
     async function cambiaImagen()
     {
+      //console.log(token);
+      let respuesta2 = await axios.get("https://localhost:4005/pasaporte");
+      console.log(respuesta2);
         let respuesta = await fetch ("https://picsum.photos/400/400");
         //console.log(respuesta);
         //console.log(urlImagen);
@@ -49,4 +60,7 @@
     </v-card-actions>
   </v-card>
 </template>
+ 
+
+
  

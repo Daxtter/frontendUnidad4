@@ -1,6 +1,9 @@
 <script setup>
 import { ref, computed, watch } from 'vue';
 import axios from 'axios';
+import Llave from "../llave.js";
+const token = Llave.llave
+axios.defaults.headers.common = {'Authorization': `bearer ${token}`};
 const informacion = ref("");
 let url  = "https://localhost:4005/responsables";
 //console.log(informacion)
